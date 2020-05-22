@@ -1,0 +1,38 @@
+@import "./layout-global";
+
+
+.main-layout{
+  min-height: 100vh;
+}
+
+.layout-header {
+  background: #fff;
+  padding: 0;
+
+  .trigger {
+    font-size: 16px;
+    line-height: @header-height;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .trigger:hover {
+    color: #003a8c;
+  }
+}
+
+.layout-sider {
+  .logo {
+    height: 64px;
+    background: #69c0ff;
+  }
+
+}
+
+@media (min-width: @media-max-width - 1px) {
+  .layout-side-drawer{
+    display: none;
+  }
+}
+

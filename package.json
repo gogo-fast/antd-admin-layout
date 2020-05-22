@@ -1,0 +1,38 @@
+{
+  "name": "antd-admin-layout",
+  "version": "1.0.0",
+  "description": "A Basic Admin Layout Base On Ant Design",
+  "keywords": [
+    "ant",
+    "antd",
+    "admin",
+    "layout",
+    "design",
+    "frontend",
+    "react",
+    "cmdb",
+    "pure"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gogo-fast/antd-admin-layout.git"
+  },
+  "contributors": [
+    "gogo-fast"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gogo-fast",
+  "license": "MIT",
+  "dependencies": {
+    "ant-design-pro": "^2.3.2",
+    "antd": "^3.26.17"
+  },
+  "devDependencies": {
+    "umi-plugin-react": "^1.15.8"
+  }
+}

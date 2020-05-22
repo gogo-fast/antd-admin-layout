@@ -1,0 +1,52 @@
+@import "../layout-global";
+
+
+.layout-header {
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  height: @header-height;
+  justify-content: space-between;
+  background: #fff;
+
+  .header-left {
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    .sider-trigger,
+    .sider-drawer-trigger {
+      height: @header-height;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 22px 24px;
+      transition: all 0.1s ease 0s, padding 0s ease 0s;
+    }
+
+    .sider-trigger:hover,
+    .drawer-trigger:hover {
+      color: #003a8c;
+    }
+  }
+}
+
+
+@media (max-width: @media-max-width) {
+  .sider-trigger {
+    display: none;
+  }
+}
+
+
+@media (min-width: @media-max-width - 1px) {
+  .sider-drawer-trigger,
+  .header-drawer-trigger {
+    display: none;
+  }
+}
+
+
+
+
