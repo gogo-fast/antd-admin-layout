@@ -1,16 +1,16 @@
-# antd-admin-layout
+# Antd-admin-layout
 
 ## Description
 A Basic Admin Layout Base On Ant Design
 
-## ABC-STACK
+## Abc-stack
 - React
 - Ant Design/Ant Design Pro
 - Umijs
 - Dva
 - React-redux
 
-## Directory Structure 
+## Directory structure 
 ```shell script
 $ tree -I node_modules -L 9 -a
 .
@@ -89,29 +89,29 @@ $ tree -I node_modules -L 9 -a
 
 ```
 
-## Quick Start
-### 1. Nodejs
-Make sure you have installed nodejs On you computer.
+## Quick start
+### 1. Install nodejs
+Make sure you have installed nodejs on you computer.
 
 [download and install nodejs](https://nodejs.org/zh-cn/)
 
-### 2 Install Umijs
+### 2 Install umijs
 ```shell script
 npm install umi@^2.0.0 -g
 ```
 
-### 3. clone project
+### 3. Clone project
 ```shell script
 git clone https://github.com/gogo-fast/antd-admin-layout.git
 cd antd-admin-layout
 ```
 
-### 4. Install Dependencies
+### 4. Install dependencies
 ```shell script
 npm install
 ```
 
-### 5. Start Local Server
+### 5. Start local server
 ```shell script
 npm run start
 ```
@@ -120,7 +120,7 @@ or
 npm start
 ```
 
-## Visit Local Server
+## Visit local server
 `http://localhost:8000`
 
 > Modify file `.env` to set listening host and port.
