@@ -1,4 +1,4 @@
-@import "../layout-global";
+@import "../layout-global.less";
 
 
 .layout-header {
@@ -6,9 +6,9 @@
   padding: 0;
   margin: 0;
   display: flex;
-  height: @header-height;
+  //height: @header-height;
   justify-content: space-between;
-  background: #fff;
+  background: @custom-header-light-bg-color;  // #d9d9d9
 
   .header-left {
     line-height: 100%;

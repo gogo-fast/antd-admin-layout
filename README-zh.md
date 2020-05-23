@@ -2,7 +2,10 @@
 
 ## 描述
 这是一个基于Ant Design的管理后台布局，省去了复杂的页面组件，纯粹是为了方便移植。
+
 如果您对`React`,`Antd`以及`Umijs`比较熟悉，您可以在此基础上快速地扩展功能。
+
+支持[亮|暗]两种侧边栏肤色
 
 ## 技术栈
 - React
@@ -155,3 +158,12 @@ npm start
 <img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/1590146750081.png" width = "300"  alt="图片名称" />
 </div>
 
+- Light and Dark
+
+<div  align=center>
+  <img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/theme-light.png" width = "900"  alt="Light" />
+ </div>
+
+<div  align=center>
+  <img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/theme-dark.png" width = "900"  alt="Dark" />
+ </div>

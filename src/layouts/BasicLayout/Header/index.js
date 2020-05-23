@@ -39,9 +39,10 @@ const MyHeader = (props) => {
 
 
 export default connect(
-    state => ({
-        siderCollapsed: state.layout.siderCollapsed,
-        siderDrawerVisible: state.layout.siderDrawerVisible
+    ({ layout }) => ({
+        siderCollapsed: layout.siderCollapsed,
+        siderDrawerVisible: layout.siderDrawerVisible,
+
     })
 )(MyHeader);
 

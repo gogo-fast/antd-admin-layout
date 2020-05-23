@@ -7,6 +7,8 @@ English | [简体中文](./README-zh.md)
 ## Description
 A Basic Admin Layout Base On Ant Design
 
+support [light|dark] side bar theme colors change.
+
 ## Abc-stack
 - React
 - Ant Design/Ant Design Pro
@@ -153,3 +155,12 @@ npm start
 <img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/1590146750081.png" width = "300"  alt="图片名称" />
 </div>
 
+- Light and Dark
+
+<div  align=center>
+  <img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/theme-light.png" width = "900"  alt="Light" />
+ </div>
+
+<div  align=center>
+  <img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/theme-dark.png" width = "900"  alt="Dark" />
+ </div>

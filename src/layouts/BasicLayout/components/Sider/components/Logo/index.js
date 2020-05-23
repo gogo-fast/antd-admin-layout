@@ -1,33 +1,39 @@
 import {connect} from 'dva';
 import styles from "./index.less";
+import logo from '../../../../../../../public/logo.svg'
 
-
-const Logo = (props) => (
-
-    // following code is used by 'index-without-flex'
-    // <div className={styles.logo}>
-    //     <img className={styles['logo-img']} alt="logo"
-    //          src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"/>
-    //     {props.siderCollapsed ? null : <h1 className={styles['logo-banner-txt']}>S - CMDB</h1>}
-    // </div>
-
-
-    <div className={styles['logo-container']}>
-        <div className={styles['logo-item']}>
-                <img className={styles['logo-img']} alt="logo"
-                     src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"/>
-        </div>
-        <div className={styles['logo-item']}>
-                {props.siderCollapsed ? null : <span className={styles['logo-banner']}>GG - CMDB</span>}
-        </div>
-    </div>
-
-);
-
-
-export default connect(
+@connect(
     state => ({
-        siderCollapsed: state.layout.siderCollapsed
+        siderCollapsed: state.layout.siderCollapsed,
+        currentTheme: state.layout.theme
     })
-)(Logo);
+)
+class Logo extends React.Component {
 
+    render() {
+            let logoBannerClassName = 'logo-banner-dark';
+            if (this.props.currentTheme.themeType === 'dark') {
+                logoBannerClassName = 'logo-banner-dark';
+            } else if (this.props.currentTheme.themeType === 'light') {
+                logoBannerClassName = 'logo-banner-light';
+            } else {
+                logoBannerClassName = 'logo-banner-dark';
+            }
+        return (
+            <div className={styles['logo-container']}>
+                <div className={styles['logo-item']}>
+                    <img className={styles['logo-img']} alt="logo"
+                         // src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"/>
+                         src={logo}/>
+                </div>
+                <div className={styles['logo-item']}>
+                    {this.props.siderCollapsed ? null :
+                        <span className={styles[logoBannerClassName]}>GG - CMDB</span>}
+                </div>
+            </div>
+        )
+    }
+}
+
+
+export default Logo;

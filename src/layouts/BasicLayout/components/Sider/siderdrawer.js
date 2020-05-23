@@ -4,9 +4,6 @@ import Logo from "./components/Logo";
 import SiderMenu from "./components/SiderMenu";
 
 
-import styles from './siderdrawer.less'
-
-
 const Siderdrawer = (props) => {
     return (
         <Drawer
@@ -16,7 +13,9 @@ const Siderdrawer = (props) => {
             onClose={props.onClose}
             visible={props.siderDrawerVisible}
             width={200}
-            className={styles['sider-drawer']}
+            bodyStyle={{padding: 0}}
+            // drawerStyle={{background: "#001529"}}
+            drawerStyle={{background: props.currentTheme.themeColor}}
         >
             <Logo/>
             <SiderMenu/>
@@ -26,7 +25,10 @@ const Siderdrawer = (props) => {
 
 
 export default connect(
-    state => ({siderDrawerVisible: state.layout.siderDrawerVisible}),
+    state => ({
+        siderDrawerVisible: state.layout.siderDrawerVisible,
+        currentTheme: state.layout.theme
+    }),
     {
         "onClose": () => ({type: "layout/siderDrawerTrigger", payload: {siderDrawerVisible: false}})
     }

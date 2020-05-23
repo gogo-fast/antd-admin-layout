@@ -1,21 +1,40 @@
-import {Layout, Menu, Icon, Switch} from 'antd';
+import {Component} from 'react'
 import {connect} from 'dva';
+import {Layout} from 'antd';
+
 
 import MySider from "./Sider";
 import MyHeader from "./Header";
 import MainContent from "./Content";
 import MyFooter from "./Footer";
-import Siderdrawer from "./components/Sider/siderdrawer";
+import {ConfigDrawer} from "./ConfigDrawer";
+import loadetheme from "../../utils/themeLoder";
+
 import styles from './index.less'
 
 
-export default class BasicLayout extends React.Component {
+@connect(
+    ({layout}) => ({
+        currentTheme: layout.theme
+    })
+)
+class BasicLayout extends Component {
+
+    componentWillMount() {
+        var currentThemeData = {};
+        currentThemeData = loadetheme();
+        this.props.dispatch({
+            type: "layout/switchTheme",
+            payload: {theme: currentThemeData}
+        })
+    }
+
     render() {
         return (
-            // 将布局的元素都放在一个 Layout 组件中是保证左右高度一致的关键。
             <Layout className={styles['main-layout']}>
                 <MySider/>
                 <Layout>
+                    {/*<ConfigDrawer/>*/}
                     <MyHeader/>
                     <MainContent>
                         {this.props.children}
@@ -26,3 +45,6 @@ export default class BasicLayout extends React.Component {
         );
     }
 }
+
+
+export default BasicLayout;

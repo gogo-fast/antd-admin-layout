@@ -1,4 +1,10 @@
 import {Icon, Menu, Dropdown, Avatar} from 'antd';
+import {connect} from 'dva';
+
+
+import ThemeSwitcher from "./components/ThemeSwither";
+
+
 import styles from './rightContent.less';
 import {LogoutIcon} from "./icons";
 
@@ -28,8 +34,13 @@ const menu = (
 const RightContent = (props) => {
     return (
         <div className={styles['header-right-items']}>
+
             <div className={styles['right-item']}>
-                <Avatar style={{backgroundColor: "#f56a00", verticalAlign: 'middle'}} size="large">
+                <ThemeSwitcher/>
+            </div>
+
+            <div className={styles['right-item']}>
+                <Avatar style={{backgroundColor: "#ad8b00", verticalAlign: 'middle'}} size="large">
                     CMDB
                 </Avatar>
             </div>
