@@ -1,5 +1,4 @@
 import {Icon, Menu, Dropdown, Avatar} from 'antd';
-import {connect} from 'dva';
 
 
 import ThemeSwitcher from "./components/ThemeSwither";

@@ -1,7 +1,5 @@
 import Dashboard from "../index";
-import DynamicAntdTheme from 'dynamic-antd-theme';
-import {generateThemeColor, changeAntdTheme} from 'dynamic-antd-theme';
-import {Button} from 'antd';
+
 
 import styles from './index.less'
 
