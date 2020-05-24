@@ -1,9 +1,8 @@
-import styles from './index.less';
 import {connect} from 'dva';
 import {Layout, Icon} from 'antd';
-
-
 import RightContent from "../components/Header/rightContent";
+
+import styles from './index.less';
 
 
 const {Header} = Layout;

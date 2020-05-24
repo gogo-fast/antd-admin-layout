@@ -54,7 +54,6 @@ class ThemeSwitcher extends Component {
                     unCheckedChildren="Light"
                     defaultChecked={this.props.currentTheme.defaultChecked}
                     onChange={() => {
-                        console.log(this);
                         this.changeTheme()
                     }}
                 />

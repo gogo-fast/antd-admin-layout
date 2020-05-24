@@ -1,11 +1,8 @@
 import {Icon, Menu, Dropdown, Avatar} from 'antd';
-
-
 import ThemeSwitcher from "./components/ThemeSwither";
 
-
-import styles from './rightContent.less';
 import {LogoutIcon} from "./icons";
+import styles from './rightContent.less';
 
 
 const menu = (

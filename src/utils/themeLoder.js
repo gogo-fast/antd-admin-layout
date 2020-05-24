@@ -1,16 +1,18 @@
 import layout from "../models/layout";
 
+
 const themeKeys = {"themeColor": null, "themeType": null, "defaultChecked": null};
 const themeTypes = {"light": null, "dark": null};
-const themeColors = {"#001529": null, "#fff": null, "#ffffff": null, "#FFF": null, "#FFFFFF": null}
-;
+const themeColors = {"#001529": null, "#fff": null, "#ffffff": null, "#FFF": null, "#FFFFFF": null};
 const defaultCheckeds = {false: null, true: null};
+
 
 function getDefaultTheme() {
     let currentThemeData = layout.state.theme;
     localStorage.setItem('theme', JSON.stringify(currentThemeData));
     return currentThemeData;
 }
+
 
 function checkThemeData(k, data) {
     switch (k) {
@@ -24,6 +26,7 @@ function checkThemeData(k, data) {
             return false
     }
 }
+
 
 function loadetheme() {
     let currentThemeData = {};

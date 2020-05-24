@@ -1,8 +1,8 @@
 import {Component} from 'react';
-import {Menu, Icon} from 'antd';
+import {Menu, Icon, Drawer} from 'antd';
 import Link from 'umi/link';
 import {connect} from 'dva';
-
+import withMyScrollBarWrap from '../../../../../../commons/MyScrollBar';
 
 import styles from "./index.less";
 
@@ -16,7 +16,6 @@ const {SubMenu} = Menu;
     })
 )
 class SiderMenu extends Component {
-
     render() {
         return (
             <Menu
@@ -24,6 +23,7 @@ class SiderMenu extends Component {
                 mode="inline"
                 className={styles['sider-menu']}
             >
+
                 <SubMenu
                     key="dashboard"
                     title={
@@ -36,13 +36,13 @@ class SiderMenu extends Component {
                     <Menu.Item key="project1">
                         <Link to={'/dashboard/pj1'}>
                             <Icon type="project"/>
-                            项目1展示
+                            <span>项目1展示</span>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="project2">
                         <Link to={'/dashboard/pj2'}>
                             <Icon type="project"/>
-                            项目2展示
+                            <span>项目2展示</span>
                         </Link>
                     </Menu.Item>
                 </SubMenu>
@@ -50,29 +50,29 @@ class SiderMenu extends Component {
                     key="user"
                     title={
                         <span>
-                    <Icon type="team"/>
-                    <span>用户页</span>
-                </span>
+                                <Icon type="team"/>
+                                <span>用户页</span>
+                            </span>
                     }
                 >
                     <Menu.Item key="userList">
                         <Link to={'/user/list'}>
                             <Icon type="unordered-list"/>
-                            用户列表
+                            <span>用户列表</span>
                         </Link>
                     </Menu.Item>
                     <SubMenu key="userRegister"
                              title={
                                  <span>
-                        <Icon type="user"/>
-                        <span>用户操作</span>
-                    </span>
+                                         <Icon type="user"/>
+                                         <span>用户操作</span>
+                                     </span>
                              }
                     >
                         <Menu.Item key="userlist">
                             <Link to={'/user/register'}>
                                 <Icon type="user-add"/>
-                                用户注册
+                                <span>用户注册</span>
                             </Link>
                         </Menu.Item>
                     </SubMenu>
@@ -82,4 +82,5 @@ class SiderMenu extends Component {
     }
 }
 
-export default SiderMenu;
+
+export default withMyScrollBarWrap(SiderMenu);

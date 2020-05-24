@@ -1,7 +1,8 @@
 import {connect} from 'dva';
 import {Drawer} from 'antd';
-import Logo from "./components/Logo";
 import SiderMenu from "./components/SiderMenu";
+
+import Logo from "./components/Logo";
 
 
 const Siderdrawer = (props) => {
@@ -15,7 +16,8 @@ const Siderdrawer = (props) => {
             width={200}
             bodyStyle={{padding: 0}}
             // drawerStyle={{background: "#001529"}}
-            drawerStyle={{background: props.currentTheme.themeColor}}
+            drawerStyle={{background: props.currentTheme.themeColor, overflow: "hidden"}}
+            // className={styles['sider-drawer']}
         >
             <Logo/>
             <SiderMenu/>

@@ -1,8 +1,6 @@
 import {Component} from 'react'
 import {connect} from 'dva';
 import {Layout} from 'antd';
-
-
 import MySider from "./Sider";
 import MyHeader from "./Header";
 import MainContent from "./Content";

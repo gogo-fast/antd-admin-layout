@@ -1,6 +1,5 @@
 import User from "../index";
 
-
 import styles from './index.less'
 
 

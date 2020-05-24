@@ -1,11 +1,10 @@
 import {connect} from 'dva';
 import {Layout} from 'antd';
-
-
 import SiderBar from '../components/Sider/siderbar';
 import Siderdrawer from "../components/Sider/siderdrawer";
-import styles from "./index.less";
 import loadetheme from "../../../utils/themeLoder";
+
+import styles from "./index.less";
 
 
 const {Sider} = Layout;

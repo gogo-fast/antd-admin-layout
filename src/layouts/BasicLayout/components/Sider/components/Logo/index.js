@@ -1,6 +1,8 @@
 import {connect} from 'dva';
-import styles from "./index.less";
+
 import logo from '../../../../../../../public/logo.svg'
+import styles from "./index.less";
+
 
 @connect(
     state => ({

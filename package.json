@@ -30,7 +30,8 @@
   "license": "MIT",
   "dependencies": {
     "ant-design-pro": "^2.3.2",
-    "antd": "^3.26.17"
+    "antd": "^3.26.17",
+    "react-custom-scrollbars": "^4.2.1"
   },
   "devDependencies": {
     "umi-plugin-react": "^1.15.8"
