@@ -31,6 +31,7 @@
   "dependencies": {
     "ant-design-pro": "^2.3.2",
     "antd": "^3.26.17",
+    "dom-css": "^2.1.0",
     "react-custom-scrollbars": "^4.2.1"
   },
   "devDependencies": {
