@@ -6,7 +6,7 @@ import MyHeader from "./Header";
 import MainContent from "./Content";
 import MyFooter from "./Footer";
 import {ConfigDrawer} from "./ConfigDrawer";
-import loadetheme from "../../utils/themeLoder";
+import loadtheme from "../../utils/themeLoder";
 import styles from './index.less'
 
 
@@ -19,7 +19,7 @@ class BasicLayout extends Component {
 
     componentWillMount() {
         var currentThemeData = {};
-        currentThemeData = loadetheme();
+        currentThemeData = loadtheme();
         this.props.dispatch({
             type: "layout/switchTheme",
             payload: {theme: currentThemeData}

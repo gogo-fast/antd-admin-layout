@@ -2,7 +2,7 @@ import {connect} from 'dva';
 import {Layout} from 'antd';
 import SiderBar from '../components/Sider/siderbar';
 import Siderdrawer from "../components/Sider/siderdrawer";
-import loadetheme from "../../../utils/themeLoder";
+import loadtheme from "../../../utils/themeLoder";
 
 import styles from "./index.less";
 
@@ -14,7 +14,7 @@ class MySider extends React.Component {
 
     componentWillMount() {
         var currentThemeData = {};
-        currentThemeData = loadetheme();
+        currentThemeData = loadtheme();
         this.props.dispatch({
             type: "layout/switchTheme",
             payload: {theme: currentThemeData}

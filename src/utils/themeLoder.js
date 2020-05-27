@@ -28,7 +28,7 @@ function checkThemeData(k, data) {
 }
 
 
-function loadetheme() {
+function loadtheme() {
     let currentThemeData = {};
     try {
         currentThemeData = JSON.parse(localStorage.getItem('theme'));
@@ -50,7 +50,7 @@ function loadetheme() {
 }
 
 
-export default loadetheme;
+export default loadtheme;
 
 
 
