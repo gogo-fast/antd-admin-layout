@@ -7,7 +7,6 @@ import MainContent from "./Content";
 import MyFooter from "./Footer";
 import {ConfigDrawer} from "./ConfigDrawer";
 import loadetheme from "../../utils/themeLoder";
-
 import styles from './index.less'
 
 
@@ -31,7 +30,7 @@ class BasicLayout extends Component {
         return (
             <Layout className={styles['main-layout']}>
                 <MySider/>
-                <Layout>
+                <Layout className={styles['right-layout']}>
                     {/*<ConfigDrawer/>*/}
                     <MyHeader/>
                     <MainContent>

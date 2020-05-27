@@ -5,8 +5,7 @@ export default {
             'umi-plugin-react',
             {
                 antd: true,
-                dva: true
-                // 在这里打开 dva
+                dva: true  // 在这里打开 dva
             }
         ],
     ],
