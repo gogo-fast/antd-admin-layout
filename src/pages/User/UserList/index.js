@@ -1,12 +1,14 @@
 import {connect} from 'dva'
 import {Component} from 'react';
 import User from "../index";
-import {Table, Divider, Tag, Button} from 'antd';
+import {Table, Divider, Tag, Button, Icon} from 'antd';
 import Link from 'umi/link';
 import {parseSearch, validPageSize, validPageNum} from "../../../utils/parseSearch";
 
 
 const pageSizeOptions = ["5", "10", "20", "50"];
+const EditableContext = React.createContext();
+
 
 @connect(
     ({user, loading}) => ({
@@ -65,12 +67,14 @@ class UserList extends Component {
     // 使url和当前页数据一致
     itemRender = (page, type, originalElement) => {
         // console.log(page, type)
-        if (page === 0)
-            return originalElement;
+        // if (page === 0)
+        //     return originalElement;
         if (type === 'prev')
-            return <Link className="ant-pagination-item-link" to={this.getUrl(page, this.state.pageSize)}>&lt;</Link>;
+            return <Link className="ant-pagination-item-link" to={this.getUrl(page, this.state.pageSize)}><Icon
+                type="caret-left"/></Link>;
         if (type === 'next')
-            return <Link className="ant-pagination-item-link" to={this.getUrl(page, this.state.pageSize)}>&gt;</Link>;
+            return <Link className="ant-pagination-item-link" to={this.getUrl(page, this.state.pageSize)}><Icon
+                type="caret-right"/></Link>;
         if (type === 'page')
             return <Link to={this.getUrl(page, this.state.pageSize)}>{page}</Link>;
 
@@ -84,6 +88,7 @@ class UserList extends Component {
         for (let k in firstRecord) {
             if (k === "key") continue;
             let column = {};
+            column.align = 'center'
             column.title = k;
             column.dataIndex = k;
             column.key = k;
@@ -96,23 +101,30 @@ class UserList extends Component {
                     }
                 }
             }
+            if (k === 'userId') {
+                column.width = '70px'
+            }
             columns.push(column)
         }
+
         if (columns.length !== 0) {
             columns.push({
-                title: 'Action',
-                dataIndex: '',
-                key: 'x',
-                render: () => <span>
-                <Button type="primary">Add</Button>
-                <Divider type="vertical"/>
-                <Button>Edit</Button>
-                <Divider type="vertical"/>
-                <Button type="danger">Edit</Button>
-            </span>
-            });
+                    align: 'center',
+                    title: 'Action',
+                    dataIndex: '',
+                    key: 'x',
+                    render: () => (
+                        <span>
+                            <Button style={{background: '#bae637', width: '32px', padding: 0, fontSize: '20px'}} onClick={this.userEdit}><Icon
+                                type="form"/></Button>
+                            <Divider type="vertical"/>
+                            <Button style={{background: '#d4b106', width: '32px', padding: 0, fontSize: '20px'}}><Icon type="delete"/></Button>
+                        </span>
+                    )
+                }
+            );
         }
-
+        
         this.props.users.map(
             (value) => {
                 value.key = value.userId.toString();
@@ -122,6 +134,7 @@ class UserList extends Component {
         return (
             <User>
                 <Table
+                    size="small"
                     title={this.titleFunc}
                     columns={columns}
                     dataSource={this.props.users}
