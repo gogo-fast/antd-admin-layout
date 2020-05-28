@@ -13,11 +13,18 @@ export default {
         siderTrigger(state, action) {
             return Object.assign({}, state, {siderCollapsed: action.payload.siderCollapsed})
         },
-        siderDrawerTrigger(state, action) {
-            return Object.assign({}, state, {siderDrawerVisible: action.payload.siderDrawerVisible})
-        },
         switchTheme(state, action) {
             return Object.assign({}, state, {theme: action.payload.theme})
         },
+
+
+        /*
+        * siderDrawerTrigger 弃用
+        * */
+        // siderDrawerTrigger(state, action) {
+        //     return Object.assign({}, state, {siderDrawerVisible: action.payload.siderDrawerVisible})
+        // },
+
+
     }
 }

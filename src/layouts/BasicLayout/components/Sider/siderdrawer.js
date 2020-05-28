@@ -1,3 +1,6 @@
+/*
+* deprecated / 弃用
+* */
 import {connect} from 'dva';
 import {Drawer} from 'antd';
 import SiderMenu from "./components/SiderMenu";

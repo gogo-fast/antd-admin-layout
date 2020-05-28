@@ -21,15 +21,6 @@ const MyHeader = (props) => {
                         })}
                     />
                 </div>
-                <span className={styles['sider-drawer-trigger']}>
-                    <Icon
-                        type={props.siderDrawerVisible ? 'menu-fold' : 'menu-unfold'}
-                        onClick={() => props.dispatch({
-                            type: 'layout/siderDrawerTrigger',
-                            payload: {siderDrawerVisible: !props.siderDrawerVisible}
-                        })}
-                    />
-                </span>
             </div>
             <RightContent/>
         </Header>

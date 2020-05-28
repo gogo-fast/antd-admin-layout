@@ -5,12 +5,16 @@ export default {
             'umi-plugin-react',
             {
                 antd: true,
-                dva: true  // 在这里打开 dva
+                dva: true, // 在这里打开 dva
             }
         ],
     ],
     // 路由配置
     routes: [
+        {
+            path: '/login',
+            component: '../layouts/Login'
+        },
         {
             path: '/',
             component: '../layouts/BasicLayout',

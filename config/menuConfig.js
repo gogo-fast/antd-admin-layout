@@ -37,17 +37,10 @@ const menuList = [
                 url: '/user/list'
             },
             {
-                title: '用户操作',
-                key: '4',
-                icon: 'user',
-                menus: [
-                    {
-                        title: '用户注册',
-                        key: '/user/register',
-                        icon: 'user-add',
-                        url: '/user/register'
-                    },
-                ]
+                title: '用户注册',
+                key: '/user/register',
+                icon: 'user-add',
+                url: '/user/register'
             },
         ]
     }

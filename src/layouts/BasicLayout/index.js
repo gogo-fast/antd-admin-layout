@@ -7,6 +7,7 @@ import MainContent from "./Content";
 import MyFooter from "./Footer";
 import {ConfigDrawer} from "./ConfigDrawer";
 import loadtheme from "../../utils/themeLoder";
+
 import styles from './index.less'
 
 
@@ -17,7 +18,7 @@ import styles from './index.less'
 )
 class BasicLayout extends Component {
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         var currentThemeData = {};
         currentThemeData = loadtheme();
         this.props.dispatch({

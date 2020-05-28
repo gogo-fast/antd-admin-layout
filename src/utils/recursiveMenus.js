@@ -1,4 +1,4 @@
-import {Menu,Icon} from 'antd';
+import {Menu, Icon} from 'antd';
 import Link from 'umi/link';
 
 const {SubMenu} = Menu;
@@ -18,9 +18,9 @@ function recursiveMenus(menus) {
                         key={k}
                         title={
                             <span>
-                          <Icon type={i}/>
-                          <span>{t}</span>
-                    </span>
+                                  <Icon type={i}/>
+                                  <span>{t}</span>
+                            </span>
                         }
                     >
                         {recursiveMenus(menus)}

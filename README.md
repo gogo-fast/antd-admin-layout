@@ -138,29 +138,3 @@ npm start
 <img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/1590146478910.png" width = "900"  alt="全屏" />
 </div>
 
-- Ipad horizontal
-<div  align=center>
-<img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/1590149861980.png" width = "600"  alt="图片名称" />
-</div>
-
-- Ipad vertical
-<div  align=center>
-<img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/1590146801968.png" width = "450"  alt="图片名称" />
-<img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/1590146873202.png" width = "450"  alt="图片名称" />
-</div>
-
-- Galaxy vertical
-
-<div  align=center>
-<img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/1590146750081.png" width = "300"  alt="图片名称" />
-</div>
-
-- Light and Dark
-
-<div  align=center>
-  <img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/theme-light.png" width = "900"  alt="Light" />
- </div>
-
-<div  align=center>
-  <img src="https://github.com/gogo-fast/pictures/blob/master/antd-admin-layout/theme-dark.png" width = "900"  alt="Dark" />
- </div>
